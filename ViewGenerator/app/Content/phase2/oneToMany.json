@@ -1,0 +1,79 @@
+{
+  "type": "TABLE",
+  "objects": [
+    {
+      "alias": "CUSTOMER",
+      "name": "Customer",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": true,
+          "alias": "CUSTOMER ID",
+          "name": "customer_id",
+          "type": "Int"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "NAME",
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "ADDRESS",
+          "name": "address",
+          "type": "String"
+        }
+      ],
+      "associations": []
+    },
+    {
+      "alias": "ORDER",
+      "name": "Order",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": true,
+          "alias": "ORDER ID",
+          "name": "order_id",
+          "type": "Int"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DATE",
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "PRICE",
+          "name": "price",
+          "type": "Double"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "OneToMany",
+          "rightAssociation": [
+            {
+              "object": {
+                "name": "Customer",
+                "attribute": "customer_id",
+                "localAttribute": "p_id",
+                "isInsertRequired": true
+              },
+              "cardinality": {
+                "min": "N/A",
+                "max": "N/A"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

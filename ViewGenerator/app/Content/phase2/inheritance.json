@@ -1,0 +1,65 @@
+{
+  "type": "CLASS",
+  "objects": [
+    {
+      "alias": "ANIMAL",
+      "name": "Animal",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "NAME",
+          "name": "a_name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "ANIMAL ID",
+          "name": "a_id",
+          "type": "String"
+        }
+      ],
+      "associations": [
+      ]
+    },
+    {
+      "alias": "DOG",
+      "name": "Dog",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DOG NAME",
+          "name": "dog_name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DOG ID",
+          "name": "d_id",
+          "type": "String"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "INHERITANCE",
+          "rightAssociation": [
+            {
+              "object": {
+                "name": "Animal",
+                "attribute": "ANIMAL",
+                "is_insert_required": false
+              },
+              "cardinality": {
+                "min": "N/A",
+                "max": "N/A"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

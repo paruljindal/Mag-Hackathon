@@ -1,0 +1,73 @@
+{
+  "object": {
+    "details": {
+      "alias": "<ALIAS_TABLENAME>",
+      "name": "<TABLENAME>"
+    },
+    "attributes": [
+      {
+        "type": "<ATTRIBUTE>",
+        "details": {
+          "specifier": "Private",
+          "isPrimary": "<PRIMARY>",
+          "alias": "<COLUMNNAME>",
+          "name": "<COLUMN><ACTUAL_NAME>",
+          "type": "<TYPE>"
+        }
+      }
+    ],
+    "associations": {
+      "table": [
+        {
+          "rightAssociation": [
+            {
+              "leftObject": {
+                "name": "<FIRST_TABLE>",
+                "attribute": "<FIRST_TABLE_COLUMN>"
+              },
+              "rightObject": {
+                "name": "<SECOND_TABLE>",
+                "attribute": "<SECOND_TABLE_COLUMN>"
+              },
+              "leftAssociation": {
+                "min": "<>",
+                "max": "<>"
+              },
+              "rightAssociation": {
+                "min": "<>",
+                "max": "<>"
+              }
+            }
+          ],
+          "identifier": "<ASSOCIATION_IDENTIFIER>"
+        }
+      ],
+      "class": [
+        {
+          "identifier": "<ASSOCIATION_IDENTIFIER>",
+          "type": "class/column",
+          "rightAssociation": [
+            {
+              "leftObject": {
+                "name": "<FIRST_TABLE>",
+                "attribute": "FIRST_TABLE_COLUMN"
+              },
+              "rightObject": {
+                "name": "<SECOND_TABLE>",
+                "attribute": "SECOND_TABLE_COLUMN"
+              },
+              "leftAssociation": {
+                "min": "<>",
+                "max": "<>"
+              },
+              "rightAssociation": {
+                "min": "<>",
+                "max": "<>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

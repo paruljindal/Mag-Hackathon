@@ -1,0 +1,36 @@
+{
+  "type": "<CLASS/TABLE>",
+  "objects": [
+    {
+      "alias": "<ALIAS_NAME>",
+      "name": "<NAME>",
+      "attributes": [
+        {
+          "specifier": "<ACCESS_SPECIFIER>",
+          "isPrimary": "<BOOLEAN>",
+          "alias": "<COLUMNNAME>",
+          "name": "<COLUMN_ACTUAL_NAME>",
+          "type": "<DATATYPE>"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "<ASSOCIATION_TYPE>",
+          "rightAssociation": [
+            {
+              "object": {
+                "name": "<NAME>",
+                "attribute": "<ATTRIBUTE>",
+                "is_insert_required": "<IS_INSERT_REQUIRED>"
+              },
+              "cardinality": {
+                "min": "<>",
+                "max": "<>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

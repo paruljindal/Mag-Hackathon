@@ -1,0 +1,40 @@
+{
+    "views": [{
+            "tableName": "Manager",
+            "columnName": "managerName"
+        },
+        {
+            "tableName": "Employee",
+            "columnName": "employeeName"
+        }
+    ],
+    "joins": [{
+        "leftTableName": "Manager",
+        "leftColumnName": "manager_id",
+        "rightTableName": "Employee",
+        "rightColumnName": "employee_id",
+        "joinType": "FULL JOIN"
+    }],
+    "conditions": [{
+        "logicalOperator": "AND",
+        "rules": [{
+            "rule": {
+                "tableName": "Manager",
+                "columnName": "managerName",
+                "comaprisonOperator": "EQ",
+                "value": "JAYANT"
+            },
+            "conditions": [{
+                "logicalOperator": "AND",
+                "rules": [{
+                    "rule": {
+                        "tableName": "Manager",
+                        "columnName": "age",
+                        "comaprisonOperator": "GT",
+                        "value": "30"
+                    }
+                }]
+            }]
+        }]
+    }]
+}

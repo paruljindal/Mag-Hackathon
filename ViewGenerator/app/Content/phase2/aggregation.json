@@ -1,0 +1,79 @@
+{
+  "type": "CLASS",
+  "objects": [
+    {
+      "alias": "STUDENT",
+      "name": "Student",
+      "attributes": [
+        {
+          "specifier": "Public",
+          "isPrimary": false,
+          "alias": "NAME",
+          "name": "s_name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "ENROLLMENT ID",
+          "name": "e_id",
+          "type": "String"
+        },
+        {
+          "specifier": "Public",
+          "isPrimary": false,
+          "alias": "PHONE",
+          "name": "phone_number",
+          "type": "Integer"
+        }
+      ],
+      "associations": []
+    },
+    {
+      "alias": "DEPARTMENT",
+      "name": "Department",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DEPARTMENT NAME",
+          "name": "department_name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DEPARTMENT ID",
+          "name": "d_id",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "EMAIL",
+          "name": "email",
+          "type": "String"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "AGGREGATION",
+          "rightAssociation": [
+            {
+              "object": {
+                "name": "Student",
+                "attribute": "STUDENT",
+                "localAttribute": "student",
+                "is_insert_required": true
+              },
+              "cardinality": {
+                "min": "1",
+                "max": "N"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

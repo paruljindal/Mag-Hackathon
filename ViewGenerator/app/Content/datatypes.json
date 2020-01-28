@@ -1,0 +1,78 @@
+{
+    "class ": [
+        {
+            "key": 1,
+            "value": "boolean"
+        },
+        {
+            "key": 2,
+            "value": "byte"
+        },
+        {
+            "key": 3,
+            "value": "char"
+        },
+        {
+            "key": 4,
+            "value": "short"
+        },
+        {
+            "key": 5,
+            "value": "int"
+        },
+        {
+            "key": 6,
+            "value": "long"
+        },
+        {
+            "key": 7,
+            "value": "float"
+        },
+        {
+            "key": 8,
+            "value": "double"
+        },
+        {
+            "key": 9,
+            "value": "String"
+        }
+    ],
+    "table ": [
+        {
+            "key": 1,
+            "value": "int"
+        },
+        {
+            "key": 2,
+            "value": "bit"
+        },
+        {
+            "key": 3,
+            "value": "decimal"
+        },
+        {
+            "key": 4,
+            "value": "numeric"
+        },
+        {
+            "key": 5,
+            "value": "float"
+        },
+        {
+            "key": 6,
+            "value": "datetime"
+        },
+        {
+            "key": 7,
+            "value": "float"
+        },
+        {
+            "key": 8,
+            "value": "char"
+        },
+        {
+            "key": 9,
+            "value": "varchar"
+        }
+    ]
+}

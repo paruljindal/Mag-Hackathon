@@ -1,0 +1,79 @@
+{
+    "type": "CLASS",
+    "objects": [
+        {
+            "alias": "LIBRARY",
+            "name": "Library",
+            "attributes": [
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "NAME",
+                    "name": "l_name",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "LIBRARY ID",
+                    "name": "l_id",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "ONWER",
+                    "name": "l_owner",
+                    "type": "Integer"
+                }
+            ],
+            "associations": [
+                {
+                    "identifier": "COMPOSITION",
+                    "rightAssociation": [
+                        {
+                            "object": {
+                                "name": "Books",
+                                "attribute": "BOOKS",
+                                "localAttribute": "books",
+                                "is_insert_required": true
+                            },
+                            "cardinality": {
+                                "min": "1",
+                                "max": "N"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "alias": "BOOKS",
+            "name": "Books",
+            "attributes": [
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "BOOK NAME",
+                    "name": "book_name",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "BOOK ID",
+                    "name": "b_id",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "AUTHOR",
+                    "name": "author",
+                    "type": "String"
+                }
+            ],
+            "associations": []
+        }
+    ]
+}

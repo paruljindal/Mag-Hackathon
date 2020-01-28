@@ -1,0 +1,71 @@
+{
+    "type": "CLASS",
+    "objects": [
+        {
+            "alias": "BANK",
+            "name": "Bank",
+            "attributes": [
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "BANK NAME",
+                    "name": "bank_name",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "BANK ID",
+                    "name": "b_id",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "PHONE",
+                    "name": "phone_number",
+                    "type": "Integer"
+                }
+            ],
+            "associations": [
+                {
+                    "identifier": "ASSOCIATION",
+                    "rightAssociation": []
+                }
+            ]
+        },
+        {
+            "alias": "EMPLOYEE",
+            "name": "Employee",
+            "attributes": [
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "EMPLOYEE NAME",
+                    "name": "employee_name",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "EMPLOYEE ID",
+                    "name": "e_id",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "EMAIL",
+                    "name": "email",
+                    "type": "String"
+                }
+            ],
+            "associations": [
+                {
+                    "identifier": "ASSOCIATION",
+                    "rightAssociation": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+  "type": "TABLE",
+  "objects": [
+    {
+      "alias": "PERSON",
+      "name": "Person",
+      "attributes": [
+        {
+          "specifier": "NOT NULL",
+          "isPrimary": true,
+          "alias": "PERSON ID",
+          "name": "person_id",
+          "type": "Int"
+        },
+        {
+          "specifier": "NOT NULL",
+          "isPrimary": false,
+          "alias": "NAME",
+          "name": "s_name",
+          "type": "varchar(255)"
+        },
+        {
+          "specifier": "NULL",
+          "isPrimary": false,
+          "alias": "ADDRESS",
+          "name": "address",
+          "type": "varchar(255)"
+        }
+      ],
+      "associations": []
+    },
+    {
+      "alias": "PASSPORT",
+      "name": "Passport",
+      "attributes": [
+        {
+          "specifier": "NOT NULL",
+          "isPrimary": true,
+          "alias": "PASSPORT ID",
+          "name": "passport_id",
+          "type": "Int"
+        },
+        {
+          "specifier": "NULL",
+          "isPrimary": false,
+          "alias": "NUMBER",
+          "name": "number",
+          "type": "varchar(255)"
+        },
+        {
+          "specifier": "NULL",
+          "isPrimary": false,
+          "alias": "EXP_DATE",
+          "name": "exp_date",
+          "type": "varchar(255)"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "OneToOne",
+          "rightAssociation": [
+            {
+              "object": {
+                "name": "Person",
+                "attribute": "person_id",
+                "localAttribute": "p_id",
+                "isInsertRequired": true
+              },
+              "cardinality": {
+                "min": "N/A",
+                "max": "N/A"
+              }
+            },
+            {
+              "object": {
+                "name": "Person",
+                "attribute": "address",
+                "localAttribute": "a_id",
+                "isInsertRequired": true
+              },
+              "cardinality": {
+                "min": "N/A",
+                "max": "N/A"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+    "type": "TABLE",
+    "objects": [{
+            "alias": "MANAGER",
+            "name": "Manager",
+            "attributes": [{
+                    "specifier": "Private",
+                    "isPrimary": true,
+                    "alias": "MANAGER ID",
+                    "name": "manager_id",
+                    "type": "Int"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "NAME",
+                    "name": "managerName",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "AGE",
+                    "name": "age",
+                    "type": "int"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "SALARY",
+                    "name": "salary",
+                    "type": "int"
+                }
+            ],
+            "associations": []
+        },
+        {
+            "alias": "EMPLOYEE",
+            "name": "Employee",
+            "attributes": [{
+                    "specifier": "Private",
+                    "isPrimary": true,
+                    "alias": "EMPLOYEE ID",
+                    "name": "employee_id",
+                    "type": "Int"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "NAME",
+                    "name": "employeeName",
+                    "type": "String"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "AGE",
+                    "name": "age",
+                    "type": "int"
+                },
+                {
+                    "specifier": "Private",
+                    "isPrimary": false,
+                    "alias": "SALARY",
+                    "name": "salary",
+                    "type": "int"
+                }
+            ],
+            "associations": [{
+                "identifier": "OneToMany",
+                "rightAssociation": [{
+                    "object": {
+                        "name": "Manager",
+                        "attribute": "manager_id",
+                        "local_attribute": "m_id",
+                        "is_insert_required": true
+                    },
+                    "cardinality": {
+                        "min": "N/A",
+                        "max": "N/A"
+                    }
+                }]
+            }]
+        }
+    ]
+}

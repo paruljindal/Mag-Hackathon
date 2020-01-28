@@ -1,0 +1,131 @@
+{
+  "type": "TABLE",
+  "objects": [
+    {
+      "alias": "STUDENT",
+      "name": "Student",
+      "attributes": [
+        {
+          "specifier": "NOT NULL",
+          "isPrimary": true,
+          "alias": "STUDENT ID",
+          "name": "s id",
+          "type": "Int"
+        },
+        {
+          "specifier": "NOT NULL",
+          "isPrimary": false,
+          "alias": "NAME",
+          "name": "s_name",
+          "type": "String"
+        },
+        {
+          "specifier": "NULL",
+          "isPrimary": false,
+          "alias": "PHONE",
+          "name": "phone_number",
+          "type": "String"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "ManyToMany",
+          "rightAssociation": [
+            {
+              "object": {
+                "name": "Course",
+                "attribute": "c_id",
+                "localAttribute": "c_id",
+                "isInsertRequired": true
+              },
+              "cardinality": {
+                "min": "N/A",
+                "max": "N/A"
+              }
+            },
+            {
+              "object": {
+                "name": "Subject",
+                "attribute": "sub_id",
+                "localAttribute": "sub_id",
+                "isInsertRequired": true
+              },
+              "cardinality": {
+                "min": "N/A",
+                "max": "N/A"
+              }
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "alias": "COURSE",
+      "name": "Course",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": true,
+          "alias": "COURSE ID",
+          "name": "c_id",
+          "type": "Int"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "COURSE NAME",
+          "name": "c_name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DESCRIPTION",
+          "name": "description",
+          "type": "String"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "ManyToMany",
+          "rightAssociation": []
+        }
+      ]
+    },
+    {
+      "alias": "SUBJECT",
+      "name": "Subject",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": true,
+          "alias": "SUBJECT ID",
+          "name": "s_id",
+          "type": "Int"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "SUB NAME",
+          "name": "s_name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DESCRIPTION",
+          "name": "description",
+          "type": "String"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "ManyToMany",
+          "rightAssociation": []
+        }
+      ]
+    }
+
+  ]
+}

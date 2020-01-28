@@ -1,0 +1,111 @@
+{
+  "type": "CLASS",
+  "objects": [
+    {
+      "alias": "STUDENT",
+      "name": "Student",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "NAME",
+          "name": "s_name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "ENROLLMENT ID",
+          "name": "e_id",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "PHONE",
+          "name": "phone_number",
+          "type": "Integer"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "AGGREGATION",
+          "rightAssociation": []
+        }
+      ]
+    },
+    {
+      "alias": "DEPARTMENT",
+      "name": "Department",
+      "attributes": [
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DEPARTMENT NAME",
+          "name": "department_name",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "DEPARTMENT ID",
+          "name": "d_id",
+          "type": "String"
+        },
+        {
+          "specifier": "Private",
+          "isPrimary": false,
+          "alias": "EMAIL",
+          "name": "email",
+          "type": "String"
+        }
+      ],
+      "associations": [
+        {
+          "identifier": "AGGREGATION",
+          "rightAssociation": [
+            {
+              "object": {
+                "name": "Students",
+                "attribute": "STUDENT"
+              },
+              "cardinality": {
+                "min": "1",
+                "max": "N"
+              }
+            },
+            {
+              "object": {
+                "name": "Books",
+                "attribute": "BOOKS"
+              },
+              "cardinality": {
+                "min": "1",
+                "max": "1"
+              }
+            }
+          ]
+        },
+        {
+          "identifier": "COMPOSITION",
+          "rightAssociation": [
+            {
+              "object": {
+                "name": "Libraries",
+                "attribute": "LIBRARIES"
+              },
+              "cardinality": {
+                "min": "1",
+                "max": "N"
+              }
+            }
+          ]
+        },
+        {
+          "identifier": "ASSOCIATION",
+          "rightAssociation": []
+        }
+      ]
+    }
+  ]
+}

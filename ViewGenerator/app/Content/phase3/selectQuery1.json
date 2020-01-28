@@ -1,0 +1,94 @@
+{
+  "views": [
+    {
+      "tableName": "Manager",
+      "columnName": "managerName"
+    },
+    {
+      "tableName": "Employee",
+      "columnName": "employeeName"
+    }
+  ],
+  "joins": [
+    {
+      "leftTableName": "Manager",
+      "leftColumnName": "manager_id",
+      "rightTableName": "Employee",
+      "rightColumnName": "employee_id",
+      "joinType": "FULL JOIN"
+    }
+  ],
+  "conditions": [
+    {
+      "logicalOperator": "AND",
+      "rules": [
+        {
+          "rule": {
+            "tableName": "Manager",
+            "columnName": "managerName",
+            "comaprisonOperator": "EQ",
+            "value": "JAYANT"
+          },
+          "conditions": [
+            {
+              "logicalOperator": "AND",
+              "rules": [
+                {
+                  "rule": {
+                    "tableName": "Manager",
+                    "columnName": "age",
+                    "comaprisonOperator": "GT",
+                    "value": "30"
+                  },
+                  "conditions": [
+                    {
+                      "logicalOperator": "OR",
+                      "rules": [
+                        {
+                          "rule": {
+                            "tableName": "Manager",
+                            "columnName": "salary",
+                            "comaprisonOperator": "GT",
+                            "value": 1000000
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "logicalOperator": "AND",
+              "rules": [
+                {
+                  "rule": {
+                    "tableName": "Employee",
+                    "columnName": "employeeName",
+                    "comaprisonOperator": "EQ",
+                    "value": "Arjun"
+                  },
+                  "conditions": [
+                    {
+                      "logicalOperator": "OR",
+                      "rules": [
+                        {
+                          "rule": {
+                            "tableName": "Employee",
+                            "columnName": "salary",
+                            "comaprisonOperator": "GT",
+                            "value": 500000
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
